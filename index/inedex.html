@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de documentos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" type="image/png" href="imagenes/logo2.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="spinner" class="text-center" style="display: none;">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Cargando...</span>
+        </div>
+        <p>Cargando...</p>
+    </div>
+
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.html?nombre_antecedentes=73550-0718196100053-513595#">
+            <img src="imagenes/logo2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            
+        </a>
+        <p>VERIFICACIÓN DE CONSTANCIAS - POLICIA NACIONAL DE HONDURAS</p>
+        <img src="imagenes/logo1.png" width="30" height="30" alt="">
+    </nav>
+
+    <div class="container">
+        <img src="imagenes/secretaria-seguridad.svg" alt="logo_secretaria_seguridad" width="100%">
+
+       
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingrese su nombre completo" value="ENRIQUE ALONSO RODRIGUEZ PALMA" readonly>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="numeroIdentidad">Número de Identidad:</label>
+                    <input type="text" id="numeroIdentidad" name="numeroIdentidad" class="form-control" placeholder="Ingrese su número de identidad"  value="0718-1961-00053"  readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="fechaPermiso">Fecha y hora de solicitud:</label>
+                    <input type="text" id="fechaPermiso" name="fechaPermiso" class="form-control" value="2026-03-18 13:31:58" readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="pdfViewer">
+                    <div class="iframe-container pdf-container">
+                        <img id="pdfImage" class="img-fluid pdf-embed" src="imagenes/imagepdf.png" alt="Vista previa de la constancia">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="form-group" id="mensaje_descargar">
+                    <label for="observaciones" style="color: red;">Puedes descargar su constancia, solo haga click en descargar: </label>
+                    <button type="button" id="btnDescargar" class="btn btn-success">
+                        <i class="fas fa-download"></i> Descargar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
