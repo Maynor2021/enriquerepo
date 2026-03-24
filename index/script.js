@@ -1,6 +1,7 @@
 var base64Pdf = null;
 var nombre_archivo = "constancia";
-var pdfLocalPath = "../Solicitud_73550_ENRIQUE%20ALONSO%20RODRIGUEZ%20PALMA%20(1).pdf";
+// Ruta absoluta para Vercel (archivo está en la raíz del deploy)
+var pdfLocalPath = "/image.pdf";
 
 
 document.addEventListener('DOMContentLoaded', async () => {
